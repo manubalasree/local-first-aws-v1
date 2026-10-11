@@ -1,0 +1,11 @@
+# Terragrunt / Terraform
+.terragrunt-cache/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+
+# Local secrets / env
+.env
+*.pem

@@ -1,0 +1,23 @@
+[Unit]
+Description=Floci AWS emulator
+
+[Container]
+ContainerName=floci
+Image=docker.io/floci/floci:2.2.0
+User=root
+PublishPort=4566:4566
+Volume=%t/podman/podman.sock:/var/run/docker.sock
+Volume=floci-data:/data
+Environment=FLOCI_DEFAULT_REGION=ca-central-1
+Environment=FLOCI_HOSTNAME=192.168.2.209
+Environment=FLOCI_BASE_URL=http://192.168.2.209:4566
+Environment=FLOCI_STORAGE_MODE=hybrid
+Environment=FLOCI_STORAGE_PERSISTENT_PATH=/data
+Environment=FLOCI_SERVICES_UI_ENABLED=false
+Environment=FLOCI_SERVICES_S3_ENFORCE_AUTH=true
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
