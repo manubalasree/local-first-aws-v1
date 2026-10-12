@@ -1,6 +1,6 @@
 # local-first-aws-v1
 
-Companion code for the article **[34 Seconds on Floci, 7 Minutes on AWS: Same Terraform, Two Clouds](https://blog.virtmicro.com/sre/aws/what-local-aws-target-changes/)**.
+Companion code for the article **[Build Locally, Deploy Once: Using a Local AWS Emulator to Reach the Cloud Faster](https://blog.virtmicro.com/sre/aws/what-local-aws-target-changes/)**.
 
 It runs [Floci](https://floci.io), a free local AWS emulator, in rootless Podman, applies one Terragrunt/Terraform module (a private S3 bucket behind CloudFront with an origin access control) to it in seconds, then applies the same code to real AWS, changing only environment config.
 
